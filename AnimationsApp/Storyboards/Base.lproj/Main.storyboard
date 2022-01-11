@@ -50,6 +50,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DFa-qn-G9t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,6 +66,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Caj-H0-qRI" secondAttribute="bottom" constant="115" id="ibv-53-en3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="pPi-z4-Mmv" id="Zmh-Ku-Y8v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
