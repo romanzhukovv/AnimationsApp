@@ -8,38 +8,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Animation Test View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AnimationTestViewController" customModule="AnimationsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPi-z4-Mmv">
-                                <rect key="frame" x="70" y="56" width="180" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPi-z4-Mmv" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="50" y="56" width="220" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQJ-lI-Y1A">
-                                        <rect key="frame" x="69" y="53.5" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQJ-lI-Y1A">
+                                        <rect key="frame" x="10" y="10" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.56033623294902757" green="0.59594406994874727" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="EYL-uO-st4"/>
-                                    <constraint firstItem="AQJ-lI-Y1A" firstAttribute="centerX" secondItem="pPi-z4-Mmv" secondAttribute="centerX" id="I9h-L1-C35"/>
-                                    <constraint firstItem="AQJ-lI-Y1A" firstAttribute="centerY" secondItem="pPi-z4-Mmv" secondAttribute="centerY" id="yKx-ow-Qkf"/>
+                                    <constraint firstAttribute="width" constant="220" id="9d6-a6-4bb"/>
+                                    <constraint firstItem="AQJ-lI-Y1A" firstAttribute="top" secondItem="pPi-z4-Mmv" secondAttribute="top" constant="10" id="CJ9-TG-pKx"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AQJ-lI-Y1A" secondAttribute="trailing" constant="20" symbolic="YES" id="GxJ-Hx-IW8"/>
+                                    <constraint firstAttribute="height" constant="128" id="UVl-ul-uO9"/>
+                                    <constraint firstItem="AQJ-lI-Y1A" firstAttribute="leading" secondItem="pPi-z4-Mmv" secondAttribute="leading" constant="10" id="VUh-Dw-tu1"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Caj-H0-qRI">
-                                <rect key="frame" x="70" y="415" width="180" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Caj-H0-qRI" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="50" y="415" width="220" height="38"/>
                                 <color key="backgroundColor" red="0.33856410840233009" green="0.73605405008262548" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,16 +72,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pPi-z4-Mmv" secondAttribute="trailing" constant="70" id="58A-bO-4c1"/>
-                            <constraint firstItem="pPi-z4-Mmv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HLd-fY-K8M"/>
                             <constraint firstItem="Caj-H0-qRI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hk6-mq-3hx"/>
-                            <constraint firstItem="Caj-H0-qRI" firstAttribute="width" secondItem="pPi-z4-Mmv" secondAttribute="width" id="JqE-Cx-oWE"/>
+                            <constraint firstItem="Caj-H0-qRI" firstAttribute="width" secondItem="pPi-z4-Mmv" secondAttribute="width" id="HnG-O6-27w"/>
+                            <constraint firstItem="pPi-z4-Mmv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cry-hE-d7m"/>
                             <constraint firstItem="pPi-z4-Mmv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="hb9-z4-P3R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Caj-H0-qRI" secondAttribute="bottom" constant="115" id="ibv-53-en3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="animationView" destination="pPi-z4-Mmv" id="Zmh-Ku-Y8v"/>
+                        <outlet property="parametersLabel" destination="AQJ-lI-Y1A" id="qDB-TH-gEK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
